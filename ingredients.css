@@ -1,0 +1,205 @@
+.app-body {
+    background: #f4f7f5;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #1a7a4a, #2d9e62);
+    padding: 16px 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+}
+
+.app-main {
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+}
+
+.page-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 580px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-heading h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a3a2a;
+    margin-bottom: 6px;
+}
+
+.page-heading p {
+    color: #6b8a78;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.ingredient-input {
+    flex: 1;
+    padding: 12px 18px;
+    border: 2px solid #e0ece6;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #1a3a2a;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.ingredient-input:focus {
+    border-color: #2d9e62;
+}
+
+.add-btn {
+    padding: 12px 24px;
+    background: #2d9e62;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.add-btn:hover {
+    background: #1a7a4a;
+    transform: translateY(-1px);
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 0 4px;
+}
+
+.suggestions.hidden {
+    display: none;
+}
+
+.suggestion-chip {
+    padding: 6px 14px;
+    background: #eaf7f0;
+    color: #1a7a4a;
+    border: 1.5px solid #b8e8cc;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.12s ease;
+}
+
+.suggestion-chip:hover {
+    background: #c8f0da;
+}
+
+.ingredient-list {
+    list-style: none;
+    margin: 20px 0 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 0;
+}
+
+.ingredient-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #eaf7f0;
+    border: 1.5px solid #b8e8cc;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a3a2a;
+    animation: pop-in 0.15s ease;
+}
+
+@keyframes pop-in {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7ab095;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.12s ease;
+}
+
+.remove-btn:hover {
+    color: #c0392b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 28px 0;
+    color: #aac4b5;
+}
+
+.empty-state span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 0.95rem;
+    color: #aac4b5;
+    margin: 0;
+}
+
+.find-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(45, 158, 98, 0.25);
+    transition: opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.find-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.find-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45, 158, 98, 0.35);
+}

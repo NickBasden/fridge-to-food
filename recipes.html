@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="ingredients.css">
+        <link rel="stylesheet" href="recipes.css">
+        <title>Recipes — Fridge to Food</title>
+    </head>
+    <body class="app-body">
+        <header class="app-header">
+            <a href="ingredients.html" class="logo">🥗 Fridge to Food</a>
+        </header>
+
+        <main class="app-main">
+            <div class="recipes-page">
+                <div class="recipes-heading">
+                    <h2>Recipes for you</h2>
+                    <p class="subtitle" id="ingredient-summary">Cooking up something delicious…</p>
+                    <div class="ingredient-chips" id="ingredient-chips"></div>
+                </div>
+                <div class="results-meta" id="results-meta" style="display: none;">
+                    <div class="results-count" id="results-count"></div>
+                    <div class="sort-hint">Best matches first</div>
+                </div>
+                <div id="results" class="recipe-grid"></div>
+            </div>
+        </main>
+
+        <script src="config.js"></script>
+        <script src="recipes.js"></script>
+    </body>
+</html>
